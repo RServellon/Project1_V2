@@ -37,18 +37,9 @@ string ProductCollection::toString() const{
     stringstream s;
     s << "\nProduct List\n";
     for(int i = 0; i < getNum(); i++){
-        s << "- " <<vector[i]->toString() << "\n";
+        s << "- " << vector[i]->toString() << "\n";
     }
     return s.str();
-}
-
-void ProductCollection::clear() {
-    for (int i = 0; i < getSize(); i++) {
-        if (vector[i] != nullptr) {
-            delete vector[i];
-        }
-    }
-    setNum(0);
 }
 
 void ProductCollection::moveToLeft(int position) {
@@ -66,7 +57,6 @@ void ProductCollection::deleteProduct(string id) {
             moveToLeft(i);
             setNum(getNum() - 1);
         }
-
     }
 }
 
@@ -85,7 +75,6 @@ bool ProductCollection::addProduct(Product * myProduct) {
         setNum(getNum() + 1);
         return true;
     }
-
     return false;
 }
 

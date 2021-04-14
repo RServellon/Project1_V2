@@ -9,9 +9,8 @@
 #include "Product.h"
 #include "Date.h"
 
-// Aquí se ve el Open-Closed Principle
-// La super clase esta abierta a su extensión pero
-// cerrada a su modificación
+// Aquí se ve Open-Closed Principle: la super clase esta abierta a su extensión
+// pero cerrada a su modificación
 class Article: public Product, public CalculatePriceArticle{
 private:
     Date *date;

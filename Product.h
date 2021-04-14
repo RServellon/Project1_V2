@@ -20,8 +20,7 @@ public:
 
     string getName() const;
     string getId() const;
-    virtual float getPrice() const;
-    //no puede ser VIRTUAL PURO para poder hacer la colección de la clase generalizada
+    virtual float getPrice() const = 0;
     int getAmount() const;
 
     void setName(const string&);

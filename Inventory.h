@@ -35,14 +35,13 @@ public:
     void deleteProduct(string) override;
     Product* check(string) override;
     void depositMoney(int) override ;
-    void withdrawMoney(int) override;
+    bool withdrawMoney(int) override;
 
     //I Seller
     string getNameS() const override;
-    string toMakeThePurchase(string, int, int) override;//TODO
+    string toMakeThePurchase(string, int, int, int) override;//TODO
     string toStringS() const override;//TODO
-    bool avilable();
-    Product* isInInvent(string);
+    bool collectionEmpty() const override;
 
     string toStringSimple() const;
 };

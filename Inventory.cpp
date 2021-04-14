@@ -58,8 +58,7 @@ string Inventory::toString() const {
     s << "\nInventory";
     s << "\n\tID: " << getIdentifier();
     s << "\n\tName: " << getName();
-    if (!myCollection->empty())
-        s << "\n" << getProductCollection()->toString();
+    s << "\n" << getProductCollection()->toString();
     s << "\n" << getCashRegister()->toString();
     return s.str();
 }
@@ -91,63 +90,53 @@ void Inventory::depositMoney(int c)  {
     getCashRegister()->setMoney(getCashRegister()->getMoney() + c);
 }
 
-void Inventory::withdrawMoney(int x) {
+bool Inventory::withdrawMoney(int x) {
     int money = 0;
     money = getCashRegister()->getMoney();
     if (x <= money){
         getCashRegister()->setMoney(money - x);
-    } else{
-        cout<<"not founds"<<endl;
+        return true;
     }
+    return false;
 }
 
 string Inventory::getNameS() const {
     return name;
 }
 
-string Inventory::toMakeThePurchase(string id, int quantity, int payingAmount) {
-    int opcbill;
-    cout<<myCollection->toString();
-    cout<< "\nwhich product(s) you need?";cin>>id;
-    if (myCollection->verifyProduct(id) ){
-        cout<< "\nhow many products?";cin>>quantity;
-        if (quantity<=myCollection->productReturn(id)->getAmount()){
-            payingAmount=myCollection->productReturn(id)->getPrice() * quantity;
-            cout<< "\nwith what amount do you want to pay? (20.000, 10.000, 5.000)";
-            cin>>opcbill;
-            if (opcbill>=payingAmount){
-                if (opcbill-payingAmount < myCashRegister->getMoney() + payingAmount){
-                    cout<< "\nsuccessful purchase!";
-                    depositMoney(payingAmount);
-                    int change=opcbill-payingAmount;
-                    cout<<"money: "<<opcbill<<endl;
-                    cout<<"To pay: "<<payingAmount<<endl;
-                    cout<< myCashRegister->changeBreakdown(change);
-                    myCollection->reduceQuantity(id, quantity);
-                }
-                else{
-                    cout<< "\nnot enough money for change!";
-                }
-            }
-            else{
-                cout<< "\ninsufficient funds!";
-            }
+string Inventory::toMakeThePurchase(string id, int quantity, int paymentAmount, int optionBill) {
+    stringstream t;
+    int change = 0;
 
-        }else{
-            cout<< "\ninsufficient quantity!";
+    if (optionBill >= paymentAmount) {
+        if (optionBill - paymentAmount < getCashRegister()->getMoney() + paymentAmount) {
+            t << "\nSuccessful purchase!";
+            depositMoney(paymentAmount);
+            change = optionBill - paymentAmount;
+            t << "\nMoney: " << optionBill;
+            t << "\nTo pay: " << paymentAmount;
+            t << getCashRegister()->changeBreakdown(change);
+            getProductCollection()->reduceQuantity(id, quantity);
         }
+        t << "\nInsufficient funds!\n";
     }
-    else{
-        cout<< "\nthere is no item with that id ";
-    }
-return "";
+    t << "\nNot enough money for change!\n";
+    return t.str();
 }
+
 
 string Inventory::toStringS() const {
     stringstream s;
-    s<<"\t\nProductos disponibles";
-    s<<myCollection->toString();
+    s << "\n\tList of products available";
+    s << getProductCollection()->toString() << "\n";
     return s.str();
+}
+
+bool Inventory::collectionEmpty() const {
+    if(getProductCollection()->empty()){
+        return true;
+    }
+    return false;
 }
 
 string Inventory::toStringSimple() const{
@@ -156,17 +145,4 @@ string Inventory::toStringSimple() const{
     ss << "\n\tID: " << getIdentifier();
     ss << "\n\tName: " << getName();
     return ss.str();
-}
-
-bool Inventory::avilable() {
-    if (myCollection->empty())
-        return false;
-    return true;
-}
-
-Product *Inventory::isInInvent(string c) {
-    if (myCollection->verifyProduct(c))
-        return myCollection->productReturn(c);
-    else
-        return nullptr;
 }

@@ -23,10 +23,6 @@ string Product::getId() const {
     return id;
 }
 
-float Product::getPrice() const {
-    return price;
-}
-
 int Product::getAmount() const {
     return amount;
 }

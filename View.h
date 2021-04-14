@@ -12,12 +12,15 @@
 #include"Inventory.h"
 #include"ISeller.h"
 #include"IAdmin.h"
+#include <cctype>
 
 class View {
 public:
     static void welcome();
     static void goodbye();
     static void returnMessage();
+    static void failMenu();
+    static void clearScreen();
     static void optionErrorMessage();
     static bool userLogin();
     static Inventory* InventoryCreation();

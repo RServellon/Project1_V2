@@ -63,7 +63,7 @@ bool Article::moreThan90Days(int total) {
 
 float Article::discountArticle() {
     if (moreThan90Days(convertToDays())) {
-        return getPrice() - (getPrice() * 0.5);
+        return getPrice() - (getPrice() * 0.5f);
     }
     return price;
 }

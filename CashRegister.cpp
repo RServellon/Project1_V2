@@ -14,8 +14,8 @@ string CashRegister::changeBreakdown(int &change) {
     stringstream s;
     int opChange1 = 0, opChange2 = 0, opChange3 = 0, opChange4 = 0;
 
-    s << "Change Breakdown\n";
-    s << "The total change is " << change << "\n";
+    s << "\nChange Breakdown";
+    s << "\nThe total change is " << change;
 
     if (change >= 2000){
         opChange1 = change / 2000;
@@ -34,7 +34,7 @@ string CashRegister::changeBreakdown(int &change) {
         change = change % 100;
     }
 
-    s << "\t2000 bill(s): " << opChange1;
+    s << "\n\t2000 bill(s): " << opChange1;
     s << "\n\t1000 bill(s): " << opChange2;
     s << "\n\t500 coin(s): " << opChange3;
     s << "\n\t100 coin(s): " << opChange4;
