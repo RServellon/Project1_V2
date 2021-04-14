@@ -6,11 +6,11 @@
 #define PROJECT1_IADMIN_H
 #include"Product.h"
 
-class IAdmin{
 //Dependency inversion principle
 //Modulos de alto nivel no deben depender de los pequeños
-// sino viceversa
-//Es decir, deben usar interfaces abstractas o clases no concretas
+// sino viceversa. Es decir, deben usar interfaces abstractas o clases no concretas
+
+class IAdmin{
 public:
     virtual ~IAdmin(){};
     virtual int getIdentifier() const = 0;

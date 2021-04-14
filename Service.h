@@ -9,6 +9,9 @@
 
 // Aquí se ve Open-Closed Principle: la super clase esta abierta a su extensión pero
 // cerrada a su modificación
+
+// Aquí se respeta el concepto de Segregación de Interfaz, dado que usamos los
+// métodos de la clase abstracta
 class Service : public Product, public CalculatePriceService{
 private:
     float discountRate;

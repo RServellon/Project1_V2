@@ -8,6 +8,12 @@
 #include <sstream>
 using namespace std;
 
+// Aquí se ve Open-Closed Principle: la super clase esta abierta a su extensión
+// pero cerrada a su modificación
+
+// Aquí se respeta el concepto de Segregación de Interfaz, dado que usamos los
+// métodos en las clases hijas
+
 class Product {
 protected:
     string name;

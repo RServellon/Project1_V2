@@ -9,6 +9,9 @@
 #include"IAdmin.h"
 #include"ISeller.h"
 
+// Acá se presenta el Principio de Inversión de dependencias, ya que
+// la clase Controller no depende directamente de Inventario sino de las
+// abstracciones IAdmin y ISeller
 class Inventory:public IAdmin, public ISeller{
 private:
     int identifier;
