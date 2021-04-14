@@ -96,6 +96,8 @@ void Inventory::withdrawMoney(int x) {
     money = getCashRegister()->getMoney();
     if (x <= money){
         getCashRegister()->setMoney(money - x);
+    } else{
+        cout<<"not founds"<<endl;
     }
 }
 
@@ -104,17 +106,48 @@ string Inventory::getNameS() const {
 }
 
 string Inventory::toMakeThePurchase(string id, int quantity, int payingAmount) {
+    int opcbill;
     cout<<myCollection->toString();
     cout<< "\nwhich product(s) you need?";cin>>id;
-    if (myCollection->verifyProduct(id)){
+    if (myCollection->verifyProduct(id) ){
         cout<< "\nhow many products?";cin>>quantity;
-        myCollection->productReturn(id);
+        if (quantity<=myCollection->productReturn(id)->getAmount()){
+            payingAmount=myCollection->productReturn(id)->getPrice() * quantity;
+            cout<< "\nwith what amount do you want to pay? (20.000, 10.000, 5.000)";
+            cin>>opcbill;
+            if (opcbill>=payingAmount){
+                if (opcbill-payingAmount < myCashRegister->getMoney() + payingAmount){
+                    cout<< "\nsuccessful purchase!";
+                    depositMoney(payingAmount);
+                    int change=opcbill-payingAmount;
+                    cout<<"money: "<<opcbill<<endl;
+                    cout<<"To pay: "<<payingAmount<<endl;
+                    cout<< myCashRegister->changeBreakdown(change);
+                    myCollection->reduceQuantity(id, quantity);
+                }
+                else{
+                    cout<< "\nnot enough money for change!";
+                }
+            }
+            else{
+                cout<< "\ninsufficient funds!";
+            }
+
+        }else{
+            cout<< "\ninsufficient quantity!";
+        }
+    }
+    else{
+        cout<< "\nthere is no item with that id ";
     }
 return "";
 }
 
 string Inventory::toStringS() const {
-    return "";
+    stringstream s;
+    s<<"\t\nProductos disponibles";
+    s<<myCollection->toString();
+    return s.str();
 }
 
 string Inventory::toStringSimple() const{
@@ -123,4 +156,17 @@ string Inventory::toStringSimple() const{
     ss << "\n\tID: " << getIdentifier();
     ss << "\n\tName: " << getName();
     return ss.str();
+}
+
+bool Inventory::avilable() {
+    if (myCollection->empty())
+        return false;
+    return true;
+}
+
+Product *Inventory::isInInvent(string c) {
+    if (myCollection->verifyProduct(c))
+        return myCollection->productReturn(c);
+    else
+        return nullptr;
 }

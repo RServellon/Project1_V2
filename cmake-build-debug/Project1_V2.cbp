@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Project1_V2"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Product.h">
+				<Option output="C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/cmake-build-debug/Product.h.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 Product.h"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Product.h/fast">
+				<Option output="C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/cmake-build-debug/Product.h.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 Product.h/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Article.cpp">
+			<Option target="Product.h"/>
+		</Unit>
+		<Unit filename="C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Article.h">
+			<Option target="Product.h"/>
+		</Unit>
+		<Unit filename="C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/CalculatePrice.h">
+			<Option target="Product.h"/>
+		</Unit>
+		<Unit filename="C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/CashRegister.cpp">
+			<Option target="Product.h"/>
+		</Unit>
+		<Unit filename="C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/CashRegister.h">
+			<Option target="Product.h"/>
+		</Unit>
+		<Unit filename="C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Controller.cpp">
+			<Option target="Product.h"/>
+		</Unit>
+		<Unit filename="C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Controller.h">
+			<Option target="Product.h"/>
+		</Unit>
+		<Unit filename="C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Date.cpp">
+			<Option target="Product.h"/>
+		</Unit>
+		<Unit filename="C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Date.h">
+			<Option target="Product.h"/>
+		</Unit>
+		<Unit filename="C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/IAdmin.h">
+			<Option target="Product.h"/>
+		</Unit>
+		<Unit filename="C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/ISeller.h">
+			<Option target="Product.h"/>
+		</Unit>
+		<Unit filename="C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Inventory.cpp">
+			<Option target="Product.h"/>
+		</Unit>
+		<Unit filename="C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Inventory.h">
+			<Option target="Product.h"/>
+		</Unit>
+		<Unit filename="C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Product.cpp">
+			<Option target="Product.h"/>
+		</Unit>
+		<Unit filename="C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Product.h">
+			<Option target="Product.h"/>
+		</Unit>
+		<Unit filename="C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/ProductCollection.cpp">
+			<Option target="Product.h"/>
+		</Unit>
+		<Unit filename="C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/ProductCollection.h">
+			<Option target="Product.h"/>
+		</Unit>
+		<Unit filename="C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Service.cpp">
+			<Option target="Product.h"/>
+		</Unit>
+		<Unit filename="C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Service.h">
+			<Option target="Product.h"/>
+		</Unit>
+		<Unit filename="C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/View.cpp">
+			<Option target="Product.h"/>
+		</Unit>
+		<Unit filename="C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/View.h">
+			<Option target="Product.h"/>
+		</Unit>
+		<Unit filename="C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/main.cpp">
+			<Option target="Product.h"/>
+		</Unit>
+		<Unit filename="C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -15,6 +15,9 @@ public:
     virtual string getNameS() const = 0;
     virtual string toMakeThePurchase(string, int, int) = 0;
     virtual string toStringS() const = 0;
+    virtual bool avilable()=0;
+    virtual Product* isInInvent(string)=0;
+
 };
 
 

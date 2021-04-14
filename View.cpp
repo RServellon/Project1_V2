@@ -80,8 +80,6 @@ int View::adminMenu() {
     cout << "\t10. Ask for a specific product\n";
     cout << "\t11. Pay money to the Cash Register\n";
     cout << "\t12. Pull back money from the Cash Register\n";
-    //TODO: aqui pueden ir mas metodos.
-    // como editar los datos de productos.
     cout << "\t13. Return to the previous menu\n";
     cout << "\n\tPlease, enter your option: "; cin >> option;
     return option;
@@ -249,13 +247,16 @@ void View::option1(string name) {
 }
 
 void View::option2(ISeller *myInventory) {
-    string id;
-    int amount;
-    int paymentAmount;
-    cout << "\t2. Make the purchase\n";
-    //TODO: implementar making purchase
-    //sellerInventory->toMakeThePurchase(id, amount, paymentAmount);
-    cout << "\nMaking purchase\n";
+    if (myInventory->avilable()){
+        string id;
+        int amount;
+        int paymentAmount;
+
+        myInventory->toMakeThePurchase(id,amount,paymentAmount);
+    }
+    else{
+        cout << "\t2. there is no avilable items\n";
+    }
 }
 
 void View::option3(ISeller *myInventory) {

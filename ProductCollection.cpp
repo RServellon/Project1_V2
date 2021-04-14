@@ -85,6 +85,7 @@ bool ProductCollection::addProduct(Product * myProduct) {
         setNum(getNum() + 1);
         return true;
     }
+
     return false;
 }
 
