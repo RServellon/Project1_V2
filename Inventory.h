@@ -41,6 +41,8 @@ public:
     string getNameS() const override;
     string toMakeThePurchase(string, int, int) override;//TODO
     string toStringS() const override;//TODO
+    bool avilable();
+    Product* isInInvent(string);
 
     string toStringSimple() const;
 };
