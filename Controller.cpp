@@ -69,12 +69,12 @@ void Controller::generalControl() {
         system("pause");
         system("cls");
     }
+    delete myInventory;
 }
 
 //seller menu
 void Controller::control1() {
     int option = 0;
-
     while (option != 4) {
 
         option = View::sellerMenu();

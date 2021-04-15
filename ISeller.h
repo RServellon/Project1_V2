@@ -8,15 +8,14 @@
 #include<sstream>
 using namespace std;
 
-
 class ISeller{
 public:
     virtual ~ISeller() {}
     virtual string getNameS() const = 0;
-    virtual string toMakeThePurchase(string, int, int) = 0;
+    virtual string toMakeThePurchase(string, int, int, int) = 0;
     virtual string toStringS() const = 0;
-    virtual bool avilable()=0;
-    virtual Product* isInInvent(string)=0;
+    virtual bool collectionEmpty() const = 0;
+    virtual Product* check(string) = 0;
 
 };
 

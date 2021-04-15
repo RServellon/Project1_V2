@@ -9,6 +9,9 @@
 #include"IAdmin.h"
 #include"ISeller.h"
 
+// Acá se presenta el Principio de Inversión de dependencias, ya que
+// la clase Controller no depende directamente de Inventario sino de las
+// abstracciones IAdmin y ISeller
 class Inventory:public IAdmin, public ISeller{
 private:
     int identifier;
@@ -35,14 +38,14 @@ public:
     void deleteProduct(string) override;
     Product* check(string) override;
     void depositMoney(int) override ;
-    void withdrawMoney(int) override;
+    bool withdrawMoney(int) override;
 
     //I Seller
     string getNameS() const override;
-    string toMakeThePurchase(string, int, int) override;//TODO
+    string toMakeThePurchase(string, int, int, int) override;//TODO
     string toStringS() const override;//TODO
-    bool avilable();
-    Product* isInInvent(string);
+    bool collectionEmpty() const override;
+    bool areSpace();
 
     string toStringSimple() const;
 };

@@ -5,7 +5,6 @@
 #ifndef MAIN_CPP_VIEW_H
 #define MAIN_CPP_VIEW_H
 #include"Article.h"
-#include <cctype>
 #include <iostream>
 #include <cstdlib>
 #include"Service.h"
@@ -13,11 +12,16 @@
 #include"ISeller.h"
 #include"IAdmin.h"
 
+// Se usa el Principio de Responsabilidad Única ya que es una clase
+// de servicio para interactuar con el usuario
+
 class View {
 public:
     static void welcome();
     static void goodbye();
     static void returnMessage();
+    static void failMenu();
+    static void clearScreen();
     static void optionErrorMessage();
     static bool userLogin();
     static Inventory* InventoryCreation();

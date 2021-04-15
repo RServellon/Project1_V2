@@ -45,7 +45,7 @@ int Article::convertToDays() {
     time_t now = time(nullptr);
     struct tm * tmp = localtime(&now);
     int actualDay = tmp->tm_mday;
-    int actualMonth = 1 + tmp->tm_mon + 1;
+    int actualMonth = tmp->tm_mon + 1;
     int actualYear = 1900 + tmp->tm_year;
 
     totalDays1 = (actualYear * 365) + (actualMonth * 30) + actualDay;
@@ -63,7 +63,7 @@ bool Article::moreThan90Days(int total) {
 
 float Article::discountArticle() {
     if (moreThan90Days(convertToDays())) {
-        return getPrice() - (getPrice() * 0.5);
+        return float (getPrice() - (getPrice() * 0.5));
     }
     return price;
 }

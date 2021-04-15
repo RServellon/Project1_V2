@@ -8,6 +8,12 @@
 #include <sstream>
 using namespace std;
 
+// Aquí se ve Open-Closed Principle: la super clase esta abierta a su extensión
+// pero cerrada a su modificación
+
+// Aquí se respeta el concepto de Segregación de Interfaz, dado que usamos los
+// métodos en las clases hijas
+
 class Product {
 protected:
     string name;
@@ -20,8 +26,7 @@ public:
 
     string getName() const;
     string getId() const;
-    virtual float getPrice() const;
-    //no puede ser VIRTUAL PURO para poder hacer la colección de la clase generalizada
+    virtual float getPrice() const = 0;
     int getAmount() const;
 
     void setName(const string&);

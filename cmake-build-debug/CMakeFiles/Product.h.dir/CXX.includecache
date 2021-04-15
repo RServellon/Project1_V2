@@ -26,14 +26,6 @@ iostream
 sstream
 -
 
-C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Controller.cpp
-Controller.h
-C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Controller.h
-
-C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Controller.h
-View.h
-C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/View.h
-
 C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Date.h
 iostream
 -
@@ -49,6 +41,10 @@ iostream
 -
 sstream
 -
+
+C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Inventory.cpp
+Inventory.h
+C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Inventory.h
 
 C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Inventory.h
 ProductCollection.h
@@ -79,26 +75,4 @@ Product.h
 C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Product.h
 CalculatePrice.h
 C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/CalculatePrice.h
-
-C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/View.cpp
-View.h
-C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/View.h
-
-C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/View.h
-Article.h
-C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Article.h
-cctype
--
-iostream
--
-cstdlib
--
-Service.h
-C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Service.h
-Inventory.h
-C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Inventory.h
-ISeller.h
-C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/ISeller.h
-IAdmin.h
-C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/IAdmin.h
 

@@ -21,7 +21,6 @@ public:
     int getSize() const;
     int getNum() const;
     string toString() const;
-    void clear();
     void moveToLeft(int);
     void deleteProduct(string);
     bool verifyProduct(string);
