@@ -45,6 +45,7 @@ public:
     string toMakeThePurchase(string, int, int, int) override;//TODO
     string toStringS() const override;//TODO
     bool collectionEmpty() const override;
+    bool areSpace();
 
     string toStringSimple() const;
 };

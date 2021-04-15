@@ -6,93 +6,73 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/rebec/Desktop/Project/Project1_V2/Article.h
+C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Article.h
 ctime
 -
 CalculatePrice.h
-C:/Users/rebec/Desktop/Project/Project1_V2/CalculatePrice.h
+C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/CalculatePrice.h
 Product.h
-C:/Users/rebec/Desktop/Project/Project1_V2/Product.h
+C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Product.h
 Date.h
-C:/Users/rebec/Desktop/Project/Project1_V2/Date.h
+C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Date.h
 
-C:/Users/rebec/Desktop/Project/Project1_V2/CalculatePrice.h
+C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/CalculatePrice.h
 Date.h
-C:/Users/rebec/Desktop/Project/Project1_V2/Date.h
+C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Date.h
 
-C:/Users/rebec/Desktop/Project/Project1_V2/CashRegister.h
+C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/CashRegister.h
 iostream
 -
 sstream
 -
 
-C:/Users/rebec/Desktop/Project/Project1_V2/Date.h
+C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Date.h
 iostream
 -
 sstream
 -
 
-C:/Users/rebec/Desktop/Project/Project1_V2/IAdmin.h
+C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/IAdmin.h
 Product.h
-C:/Users/rebec/Desktop/Project/Project1_V2/Product.h
+C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Product.h
 
-C:/Users/rebec/Desktop/Project/Project1_V2/ISeller.h
+C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/ISeller.h
 iostream
 -
 sstream
 -
 
-C:/Users/rebec/Desktop/Project/Project1_V2/Inventory.h
-ProductCollection.h
-C:/Users/rebec/Desktop/Project/Project1_V2/ProductCollection.h
-CashRegister.h
-C:/Users/rebec/Desktop/Project/Project1_V2/CashRegister.h
-IAdmin.h
-C:/Users/rebec/Desktop/Project/Project1_V2/IAdmin.h
-ISeller.h
-C:/Users/rebec/Desktop/Project/Project1_V2/ISeller.h
-
-C:/Users/rebec/Desktop/Project/Project1_V2/Product.h
-iostream
--
-sstream
--
-
-C:/Users/rebec/Desktop/Project/Project1_V2/ProductCollection.h
-Product.h
-C:/Users/rebec/Desktop/Project/Project1_V2/Product.h
-Service.h
-C:/Users/rebec/Desktop/Project/Project1_V2/Service.h
-Article.h
-C:/Users/rebec/Desktop/Project/Project1_V2/Article.h
-
-C:/Users/rebec/Desktop/Project/Project1_V2/Service.h
-Product.h
-C:/Users/rebec/Desktop/Project/Project1_V2/Product.h
-CalculatePrice.h
-C:/Users/rebec/Desktop/Project/Project1_V2/CalculatePrice.h
-
-C:/Users/rebec/Desktop/Project/Project1_V2/View.cpp
-View.h
-C:/Users/rebec/Desktop/Project/Project1_V2/View.h
-
-C:/Users/rebec/Desktop/Project/Project1_V2/View.h
-Article.h
-C:/Users/rebec/Desktop/Project/Project1_V2/Article.h
-cctype
--
-iostream
--
-cstdlib
--
-Service.h
-C:/Users/rebec/Desktop/Project/Project1_V2/Service.h
+C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Inventory.cpp
 Inventory.h
-C:/Users/rebec/Desktop/Project/Project1_V2/Inventory.h
-ISeller.h
-C:/Users/rebec/Desktop/Project/Project1_V2/ISeller.h
+C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Inventory.h
+
+C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Inventory.h
+ProductCollection.h
+C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/ProductCollection.h
+CashRegister.h
+C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/CashRegister.h
 IAdmin.h
-C:/Users/rebec/Desktop/Project/Project1_V2/IAdmin.h
-cctype
+C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/IAdmin.h
+ISeller.h
+C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/ISeller.h
+
+C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Product.h
+iostream
 -
+sstream
+-
+
+C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/ProductCollection.h
+Product.h
+C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Product.h
+Service.h
+C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Service.h
+Article.h
+C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Article.h
+
+C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Service.h
+Product.h
+C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/Product.h
+CalculatePrice.h
+C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/CalculatePrice.h
 

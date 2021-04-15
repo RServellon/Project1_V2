@@ -77,6 +77,10 @@ int View::selectAView() {
     while(cin.fail()){
         cout << "You must enter a number!\n";
         failMenu();
+        cout << "-----------View Selection----------\n\n";
+        cout << "\t1. Administrator Menu\n";
+        cout << "\t2. Seller Menu\n";
+        cout << "\t3. Exit\n";
         cout << "\n\tEnter your option: "; cin >> option;
     }
 
@@ -95,6 +99,11 @@ int View::sellerMenu() {
     while(cin.fail()){
         cout << "You must enter a number!\n";
         failMenu();
+        cout << "-----------Seller Menu----------\n";
+        cout << "\t1. View inventory's name\n";
+        cout << "\t2. Make the purchase\n";
+        cout << "\t3. General view of the inventory\n";
+        cout << "\t4. Return to the previous menu\n";
         cout << "\n\tEnter your option: "; cin >> option;
     }
 
@@ -122,6 +131,21 @@ int View::adminMenu() {
     while(cin.fail()){
         cout << "You must enter a number!\n";
         failMenu();
+        cout << "-----------Administrator Menu----------\n";
+        cout << "\t1. View inventory's identifier\n";
+        cout << "\t2. Change inventory's identifier\n";
+        cout << "\t3. View inventory's name\n";
+        cout << "\t4. Change inventory's name\n";
+        cout << "\t5. Overall view of the inventory\n";
+        cout << "\t6. Add an item to the inventory\n";
+        cout << "\t7. Increase an item's quantity\n";
+        cout << "\t8. Reduce an item's quantity\n";
+        cout << "\t9. Delete an item\n";
+        cout << "\t10. Ask for a specific product\n";
+        cout << "\t11. Pay money to the Cash Register\n";
+        cout << "\t12. Pull back money from the Cash Register\n";
+        cout << "\t13. Return to the previous menu\n";
+        cout << "\n\tPlease, enter your option: ";
         cout << "\n\tEnter your option: "; cin >> option;
     }
 
@@ -166,135 +190,174 @@ void View::method5(IAdmin *myInventory) {
 }
 
 void View::method6(IAdmin *myInventory) {
-    string name, id;
-    int opt, day, month, year, amount;
-    float price, discount;
-    Date* myDate = nullptr;
-    Product* myProduct = nullptr;
+    if (myInventory->areSpace()){
+        string name, id;
+        int opt, day, month, year, amount;
+        float price, discount;
+        Date* myDate = nullptr;
+        Product* myProduct = nullptr;
 
-    cout << "\t6. Add an item to the inventory\n";
+        cout << "\t6. Add an item to the inventory\n";
 
-    cout << "\nWhat kind of product would you want to add?";
-    cout << "\n1. Article";
-    cout << "\n2. Service";
-    cout << "\nPlease, enter your option: "; cin >> opt;
-    while(cin.fail()){
-        cout << "You must enter a number!\n";
-        failMenu();
-        cout << "Please, enter your option: "; cin >> opt;
-    }
+        cout << "\nWhat kind of product would you want to add?";
+        cout << "\n1. Article";
+        cout << "\n2. Service";
+        cout << "\nPlease, enter your option: "; cin >> opt;
+        while(cin.fail()){
+            cout << "You must enter a number!\n";
+            failMenu();
+            cout << "\t6. Add an item to the inventory\n";
 
-    system("cls");
-
-    switch(opt){
-        case 1: {
-            cin.ignore();
-            cout << "\nEnter the article's id: ";
-            cin >> id;
-
-            if (myInventory->check(id)) {
-                cout << "The article's id already exist in the inventory!\n";
-            } else {
-                cout << "\nEnter the article's name: ";
-                getline(cin, name);
-                cout << "\nEnter the price: ";
-                cin >> price;
-                while (cin.fail()) {
-                    cout << "You must enter a number!\n";
-                    failMenu();
-                    cout << "Enter the price: ";
-                    cin >> price;
-                }
-
-                cout << "\nEnter the total amount of products: ";
-                cin >> amount;
-                while (cin.fail() || amount <= 0) {
-                    cout << "You must enter a number (from 1 onwards)!\n";
-                    failMenu();
-                    cout << "Enter the total amount of products: ";
-                    cin >> amount;
-                }
-
-                cout << "\n\nEnter the product's date of entry";
-                cout << "\nDay: "; cin >> day;
-                while (cin.fail()) {
-                    cout << "You must enter a number!\n";
-                    failMenu();
-                    cout << "\nEnter the day: ";
-                    cin >> day;
-                }
-
-                cout << "\nMonth: "; cin >> month;
-                while (cin.fail()) {
-                    cout << "You must enter a number!\n";
-                    failMenu();
-                    cout << "\nEnter the month: "; cin >> month;
-                }
-
-                cout << "\nYear: "; cin >> year;
-                while (cin.fail()) {
-                    cout << "You must enter a number!\n";
-                    failMenu();
-                    cout << "\nEnter the year: "; cin >> year;
-                }
-
-                myDate = new Date(day, month, year);
-                myProduct = new Article(name, id, price, amount, myDate);
-                myProduct->calculatePrice();
-                myInventory->insert(myProduct);
-                //TODO ver si se ingreso y funciona descuento
-                myInventory->check(id)->toString();
-            }
+            cout << "\nWhat kind of product would you want to add?";
+            cout << "\n1. Article";
+            cout << "\n2. Service";
+            cout << "Please, enter your option: "; cin >> opt;
         }
-            break;
-        case 2: {
-            cin.ignore();
-            cout << "\nEnter the service's id: ";
-            cin >> id;
-            if (myInventory->check(id)) {
-                cout << "The service's id already exist in the inventory!\n";
-            }else {
-                cout << "\nEnter the service's name: ";
-                getline(cin, name);
 
-                cout << "\nEnter the price: ";
-                cin >> price;
-                while (cin.fail()) {
-                    cout << "You must enter a number!\n";
-                    failMenu();
+        system("cls");
+
+        switch(opt){
+            case 1: {
+                cin.ignore();
+                cout << "\nEnter the article's id: ";
+                cin >> id;
+
+                if (myInventory->check(id)) {
+                    cout << "The article's id already exist in the inventory!\n";
+                } else {
+                    cout << "\nEnter the article's name: ";
+                    cin>>name;
+                    //getline(cin, name);
                     cout << "\nEnter the price: ";
                     cin >> price;
-                }
+                    while (cin.fail()) {
+                        cout << "You must enter a number!\n";
+                        failMenu();
+                        cout << "Enter the price: ";
+                        cin >> price;
+                    }
 
-                cout << "\nEnter the total amount of times: ";
-                cin >> amount;
-                while (cin.fail()) {
-                    cout << "You must enter a number!\n";
-                    failMenu();
-                    cout << "\nEnter the total amount of times: ";
+                    cout << "\nEnter the total amount of products: ";
                     cin >> amount;
-                }
+                    while (cin.fail() || amount <= 0) {
+                        cout << "You must enter a number (from 1 onwards)!\n";
+                        failMenu();
+                        cout << "Enter the total amount of products: ";
+                        cin >> amount;
+                    }
 
-                cout << "\nEnter the discount rate: ";
-                cin >> discount;
-                while (cin.fail()) {
-                    cout << "You must enter a number!\n";
-                    failMenu();
+                    cout << "\n\nEnter the product's date of entry (dd/mm/yyyy)";
+                    cout << "\nDay: "; cin >> day;
+                    while (cin.fail()) {
+                        cout << "You must enter a number!\n";
+                        failMenu();
+                        cout << "\nEnter the day: ";
+                        cin >> day;
+                    }
+
+                    cout << "\nMonth: "; cin >> month;
+                    while (cin.fail()) {
+                        cout << "You must enter a number!\n";
+                        failMenu();
+                        cout << "\nEnter the month: "; cin >> month;
+                    }
+
+                    cout << "\nYear: "; cin >> year;
+                    while (cin.fail()) {
+                        cout << "You must enter a number!\n";
+                        failMenu();
+                        cout << "\nEnter the year: "; cin >> year;
+                    }
+
+                    myDate = new Date(day, month, year);
+                    myProduct = new Article(name, id, price, amount, myDate);
+                    myProduct->calculatePrice();
+                    myInventory->insert(myProduct);
+                    cout<<myInventory->check(id)->toString();
+                    cout << "-----------Administrator Menu----------\n";
+                    cout << "\t1. View inventory's identifier\n";
+                    cout << "\t2. Change inventory's identifier\n";
+                    cout << "\t3. View inventory's name\n";
+                    cout << "\t4. Change inventory's name\n";
+                    cout << "\t5. Overall view of the inventory\n";
+                    cout << "\t6. Add an item to the inventory\n";
+                    cout << "\t7. Increase an item's quantity\n";
+                    cout << "\t8. Reduce an item's quantity\n";
+                    cout << "\t9. Delete an item\n";
+                    cout << "\t10. Ask for a specific product\n";
+                    cout << "\t11. Pay money to the Cash Register\n";
+                    cout << "\t12. Pull back money from the Cash Register\n";
+                    cout << "\t13. Return to the previous menu\n";
+                }
+            }
+                break;
+            case 2: {
+                cin.ignore();
+                cout << "\nEnter the service's id: ";
+                cin >> id;
+                if (myInventory->check(id)) {
+                    cout << "The service's id already exist in the inventory!\n";
+                }else {
+                    cout << "\nEnter the service's name: ";
+                    //getline(cin, name);
+                    cin>>name;
+
+                    cout << "\nEnter the price: ";
+                    cin >> price;
+                    while (cin.fail()) {
+                        cout << "You must enter a number!\n";
+                        failMenu();
+                        cout << "\nEnter the price: ";
+                        cin >> price;
+                    }
+
+                    cout << "\nEnter the total amount: ";
+                    cin >> amount;
+                    while (cin.fail()) {
+                        cout << "You must enter a number!\n";
+                        failMenu();
+                        cout << "\nEnter the total amount of times: ";
+                        cin >> amount;
+                    }
+
                     cout << "\nEnter the discount rate: ";
                     cin >> discount;
-                }
+                    while (cin.fail()) {
+                        cout << "You must enter a number!\n";
+                        failMenu();
+                        cout << "\nEnter the discount rate: ";
+                        cin >> discount;
+                    }
 
-                myProduct = new Service(name, id, price, amount, discount);
-                myProduct->calculatePrice();
-                myInventory->insert(myProduct);
-                //ver si se ingreso y funciona descuento
-                myInventory->check(id)->toString();
+                    myProduct = new Service(name, id, price, amount, discount);
+                    myProduct->calculatePrice();
+                    myInventory->insert(myProduct);
+                    cout<<myInventory->check(id)->toString()<<endl;
+                    cout << "-----------Administrator Menu----------\n";
+                    cout << "\t1. View inventory's identifier\n";
+                    cout << "\t2. Change inventory's identifier\n";
+                    cout << "\t3. View inventory's name\n";
+                    cout << "\t4. Change inventory's name\n";
+                    cout << "\t5. Overall view of the inventory\n";
+                    cout << "\t6. Add an item to the inventory\n";
+                    cout << "\t7. Increase an item's quantity\n";
+                    cout << "\t8. Reduce an item's quantity\n";
+                    cout << "\t9. Delete an item\n";
+                    cout << "\t10. Ask for a specific product\n";
+                    cout << "\t11. Pay money to the Cash Register\n";
+                    cout << "\t12. Pull back money from the Cash Register\n";
+                    cout << "\t13. Return to the previous menu\n";
+
+
+                }
             }
+                break;
+            default:
+                cout << "The option does not exist!\n";
+                break;
         }
-            break;
-        default:
-            cout << "The option does not exist!\n";
-            break;
+    } else{
+        cout<<"there is not enough space in inventory, you can delete items"<<endl;
     }
 }
 
@@ -406,38 +469,59 @@ void View::option2(ISeller *myInventory) {
     int amount = 0, paymentAmount = 0, optionBill = 0;
 
     if(!myInventory->collectionEmpty()) {
-        myInventory->toStringS();
+       cout<< myInventory->toStringS();
         cout << "\nEnter the product's id that you need: ";
         cin >> id;
 
         if (myInventory->check(id)) {
-            cout << "Enter the amount(article) or times(service) you need: ";
-            cin >> amount;
-            while (cin.fail()) {
-                cout << "You must enter a number!\n";
-                failMenu();
-                cout << "\nHow many products?";
+            string msg1;
+            cout << myInventory->check(id)->toString();
+            cout << "\tIs this your item? (Y/N)\n";
+            cin >> msg1;
+            if (msg1 == "Y" or msg1 == "y" and msg1 != "n" or msg1 != "N") {
+                cout << "Enter the amount(article) or times(service) you need: ";
                 cin >> amount;
-            }
-
-            if (amount <= myInventory->check(id)->getAmount()) {
-                paymentAmount = myInventory->check(id)->getPrice() * amount;
-
-                cout << "With what amount of money would you want to pay? (20.000, 10.000, 5.000): ";
-                cin >> optionBill;
                 while (cin.fail()) {
                     cout << "You must enter a number!\n";
                     failMenu();
-                    cout << "\nWith what amount do you want to pay? (20.000, 10.000, 5.000): ";
+                    cout << "\nHow many products?";
+                    cin >> amount;
+                }
+                string msg2;
+
+                cout << "\t\nIs this the correct amount? (Y/N)";
+                cout << amount << endl;
+                cin >> msg2;
+                if (msg2 == "Y" or msg2 == "y" and msg2 != "n" or msg2 != "N") {
+                    if (amount <= myInventory->check(id)->getAmount()) {
+                        paymentAmount = myInventory->check(id)->getPrice() * amount;
+
+                        cout << "With what amount of money would you want to pay? (20.000, 10.000, 5.000): ";
+                        cin >> optionBill;
+                        while (cin.fail()) {
+                            cout << "You must enter a number!\n";
+                            failMenu();
+                            cout << "\nWith what amount do you want to pay? (20.000, 10.000, 5.000): ";
+                        }
+
+                        cout << myInventory->toMakeThePurchase(id, amount, paymentAmount, optionBill);
+                    } else{
+                        cout << "\nThere is an excess demand!";
+                    }
+                } else {
+                    cout << "operacion cancelled!" << endl;
                 }
 
-                myInventory->toMakeThePurchase(id, amount, paymentAmount, optionBill);
+            } else {
+                cout << "\nOperation cancelled!";
             }
-            cout << "\nThere is an excess demand!";
+        } else{
+            cout << "\nThe product's id does not exist!";
         }
-        cout << "\nThe product's id does not exist!";
+    } else{
+        cout << "\nSorry, there are currently no items to display\n";
     }
-    cout << "\nSorry, there are currently no items to display\n";
+
 }
 
 void View::option3(ISeller *myInventory) {

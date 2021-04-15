@@ -11,8 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Product.h.dir/main.cpp.obj"
   "Product.h.exe"
   "Product.h.exe.manifest"
-  "Product.h.lib"
   "Product.h.pdb"
+  "libProduct.h.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

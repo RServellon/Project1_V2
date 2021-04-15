@@ -25,6 +25,7 @@ public:
     virtual Product* check(string) = 0;
     virtual void depositMoney(int) = 0;
     virtual bool withdrawMoney(int) = 0;
+    virtual bool areSpace()=0;
 };
 
 

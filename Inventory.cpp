@@ -117,10 +117,12 @@ string Inventory::toMakeThePurchase(string id, int quantity, int paymentAmount, 
             t << "\nTo pay: " << paymentAmount;
             t << getCashRegister()->changeBreakdown(change);
             getProductCollection()->reduceQuantity(id, quantity);
+        } else{
+            t << "\nNot enough money for change!\n";
         }
+    }else{
         t << "\nInsufficient funds!\n";
     }
-    t << "\nNot enough money for change!\n";
     return t.str();
 }
 
@@ -145,4 +147,12 @@ string Inventory::toStringSimple() const{
     ss << "\n\tID: " << getIdentifier();
     ss << "\n\tName: " << getName();
     return ss.str();
+}
+
+bool Inventory::areSpace() {
+    if (myCollection->getNum()<myCollection->getSize()){
+        return true;
+    } else{
+        return false;
+    }
 }
