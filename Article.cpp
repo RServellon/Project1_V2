@@ -30,7 +30,7 @@ string Article::toString() const {
     stringstream s;
     s << "\nArticle";
     s << Product::toString();
-    s << getDate()->toString();
+    s << "\n\tEntry date: " << getDate()->toString();
     return s.str();
 }
 

@@ -16,7 +16,6 @@ public:
     virtual string toStringS() const = 0;
     virtual bool collectionEmpty() const = 0;
     virtual Product* check(string) = 0;
-
 };
 
 

@@ -100,6 +100,14 @@ bool Inventory::withdrawMoney(int x) {
     return false;
 }
 
+bool Inventory::areSpace() {
+    if (getProductCollection()->getNum() < getProductCollection()->getSize()){
+        return true;
+    }
+    return false;
+}
+
+
 string Inventory::getNameS() const {
     return name;
 }
@@ -118,19 +126,17 @@ string Inventory::toMakeThePurchase(string id, int quantity, int paymentAmount, 
             t << getCashRegister()->changeBreakdown(change);
             getProductCollection()->reduceQuantity(id, quantity);
         } else{
-            t << "\nNot enough money for change!\n";
+            t << "\nNot enough money for change!\n\n";
         }
     }else{
-        t << "\nInsufficient funds!\n";
+        t << "\nInsufficient funds!\n\n";
     }
     return t.str();
 }
 
-
 string Inventory::toStringS() const {
     stringstream s;
-    s << "\n\tList of products available";
-    s << getProductCollection()->toString() << "\n";
+    s << getProductCollection()->toString();
     return s.str();
 }
 
@@ -139,20 +145,4 @@ bool Inventory::collectionEmpty() const {
         return true;
     }
     return false;
-}
-
-string Inventory::toStringSimple() const{
-    stringstream ss;
-    ss << "\nInventory";
-    ss << "\n\tID: " << getIdentifier();
-    ss << "\n\tName: " << getName();
-    return ss.str();
-}
-
-bool Inventory::areSpace() {
-    if (myCollection->getNum()<myCollection->getSize()){
-        return true;
-    } else{
-        return false;
-    }
 }

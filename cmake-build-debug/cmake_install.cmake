@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2
+# Install script for directory: C:/Users/rebec/Desktop/pp/Project1_V2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/norma/source/repos/Progra II/Proyectos/Project1_V2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/rebec/Desktop/pp/Project1_V2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

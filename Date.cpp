@@ -40,6 +40,6 @@ void Date::setYear(int year) {
 
 string Date::toString() const {
     stringstream s;
-    s << "\n\t(" << this-> getDay() << "/" << this-> getMonth() << "/"<< this-> getYear() <<")";
+    s << "( " << this-> getDay() << "/" << this-> getMonth() << "/"<< this-> getYear() << ")";
     return s.str();
 }

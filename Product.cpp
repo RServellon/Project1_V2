@@ -45,7 +45,7 @@ void Product::setAmount(const int &amount) {
 
 string Product::toString() const {
     stringstream ss;
-    ss << "\n\tName: " << getName();
+    ss << "\tName: " << getName();
     ss << "\n\tID: " << getId();
     ss << "\n\tPrice: " << getPrice();
     ss << "\n\tAmount: " << getAmount();

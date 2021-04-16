@@ -5,17 +5,11 @@
 #include "Controller.h"
 
 Controller::Controller() {
-    sellerInventory = nullptr;
-    adminInventory = nullptr;
+    sellerInventory = new Inventory();
+    adminInventory = new Inventory();
 }
 
 Controller::~Controller() {
-    if(getSellerInventory()){
-        delete getSellerInventory();
-    }
-    if(getAdminInventory()){
-        delete getAdminInventory();
-    }
 }
 
 void Controller::setSellerInventory(ISeller *sellerInventory) {
@@ -39,24 +33,26 @@ void Controller::generalControl() {
     int option = 0;
 
     View::welcome();
-    system("pause");
-    system("cls");
+    View::clearScreen();
 
     myInventory = View::InventoryCreation();
+    View::clearScreen();
+
     this->setAdminInventory(myInventory);
     this->setSellerInventory((myInventory));
 
     while(option != 3){
-
         option = View::selectAView();
 
         switch(option){
             case 1:
                 if(View::userLogin()){
+                    View::clearScreen();
                     control2();
                 }
                 break;
             case 2:
+                View::clearScreen();
                 control1();
                 break;
             case 3:
@@ -66,8 +62,7 @@ void Controller::generalControl() {
                 View::optionErrorMessage();
                 break;
         }
-        system("pause");
-        system("cls");
+        View::clearScreen();
     }
     delete myInventory;
 }
@@ -78,7 +73,7 @@ void Controller::control1() {
     while (option != 4) {
 
         option = View::sellerMenu();
-
+        View::clearScreen();
         switch(option){
             case 1:
                 View::option1(getSellerInventory()->getNameS());
@@ -96,8 +91,7 @@ void Controller::control1() {
                 View::optionErrorMessage();
                 break;
         }
-        system("pause");
-        system("cls");
+        View::clearScreen();
     }
 
 }
@@ -107,6 +101,7 @@ void Controller::control2() {
     while(option != 13){
 
         option = View::adminMenu();
+        View::clearScreen();
 
         switch(option){
             case 1:
@@ -152,8 +147,7 @@ void Controller::control2() {
                 View::optionErrorMessage();
                 break;
         }
-        system("pause");
-        system("cls");
+        View::clearScreen();
     }
 }
 

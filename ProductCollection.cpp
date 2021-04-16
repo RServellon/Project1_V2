@@ -37,7 +37,7 @@ string ProductCollection::toString() const{
     stringstream s;
     s << "\nProduct List\n";
     for(int i = 0; i < getNum(); i++){
-        s << "- " << vector[i]->toString() << "\n";
+        s  << vector[i]->toString() << "\n";
     }
     return s.str();
 }

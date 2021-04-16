@@ -14,8 +14,8 @@ string CashRegister::changeBreakdown(int &change) {
     stringstream s;
     int opChange1 = 0, opChange2 = 0, opChange3 = 0, opChange4 = 0;
 
-    s << "\nChange Breakdown";
-    s << "\nThe total change is " << change;
+    s << "\n\n\tChange Breakdown";
+    s << "\n\tThe total change is " << change;
 
     if (change >= 2000){
         opChange1 = change / 2000;
@@ -38,7 +38,7 @@ string CashRegister::changeBreakdown(int &change) {
     s << "\n\t1000 bill(s): " << opChange2;
     s << "\n\t500 coin(s): " << opChange3;
     s << "\n\t100 coin(s): " << opChange4;
-
+    s << "\n\n";
     return s.str();
 }
 
@@ -53,6 +53,6 @@ int CashRegister::getMoney() const {
 string CashRegister::toString() const {
     stringstream ss;
     ss << "\nCash Register";
-    ss << "\n\tMoney: "<< getMoney();
+    ss << "\n\tMoney: "<< getMoney() << "\n\n";
     return ss.str();
 }

@@ -39,15 +39,13 @@ public:
     Product* check(string) override;
     void depositMoney(int) override ;
     bool withdrawMoney(int) override;
+    bool areSpace();
 
     //I Seller
     string getNameS() const override;
     string toMakeThePurchase(string, int, int, int) override;//TODO
     string toStringS() const override;//TODO
     bool collectionEmpty() const override;
-    bool areSpace();
-
-    string toStringSimple() const;
 };
 
 
